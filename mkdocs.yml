@@ -1,0 +1,169 @@
+# Project Information
+site_name:  رایتاپ‌های picoctf تیم فلگ موتوری
+site_description: رایتاپ‌های picoctf تیم فلگ موتوری
+site_author: FlagMotori Team
+site_url: https://FlagMotori.github.io/writeups/
+
+# Repository
+repo_name: 'FlagMotori/picoctf'
+repo_url: 'https://github.com/FlagMotori/picoctf'
+edit_uri: 'blob/main/docs/'
+
+# Copyright
+copyright: 'Copyright &copy; 2022 - 2024 FlagMotori Team'
+
+
+# Theme
+theme:
+  name: 'material'
+  # logo: 'logo.png'
+  favicon: 'favicon.png'
+  language: 'fa'
+  custom_dir: 'overrides'
+  palette:
+    scheme: 'slate'
+    primary: 'pink'
+    accent: 'purple'
+  icon:
+    logo: 'material/school'
+    repo: fontawesome/brands/github-alt
+  features:
+    - navigation.tabs
+    #- navigation.tabs.sticky
+    #- header.autohide
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - navigation.indexes
+    - navigation.footer
+  font:
+    text: 'IBM Plex Sans Arabic'
+    code: 'Source Code Pro'
+
+
+
+# Plugins
+plugins:
+  - glightbox
+  - search
+  - tags:
+      tags_file: tags.md
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      type: timeago
+      timezone: Asia/Tehran
+      locale: fa
+      fallback_to_build_date: false
+      enable_creation_date: true
+  - blog
+  #- mk2pdf-export
+  #- page-to-pdf
+    #  disableOnServe: false # should be last
+
+
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: G-P5HZ1W8YEZ
+  search:
+    lang:
+        - 'en'
+        - 'ar'
+  # disqus: 'shortname' # for comment
+  copyright: 'CC BY-NC-SA 4.0'
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FlagMotori
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/FlagMotori
+
+
+extra_javascript:
+  - 'https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js'
+  - 'static/js/extra.js'
+  - 'https://cdnjs.loli.net/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+
+
+extra_css:
+  - 'static/css/extra.css'
+
+
+# Extensions
+markdown_extensions:
+  - tables
+  - attr_list
+  - admonition
+  - md_in_html
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      # emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      # emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.betterem:
+      smart_enable: all
+
+
+
+# Contents
+nav:
+    # - نقطه شروع:
+    #     - index.md
+    #     - "آشنایی با مسابقات CTF": getStarted/CTF-introduction/index.md
+    #     - "راهنمای شروع CTF": getStarted/beginners-guide/index.md
+
+    #     #- introduction/تاریخچه در ایران.md
+    #     - همکاری با ما:
+    #         - "نحوه همکاری": getStarted/contribution.md
+    #         - "نگارش رایتاپ": getStarted/writing-method.md
+    #         - "نوشتن با فرمت md": getStarted/template.md
+
+    #     - برچسب‌ها: tags.md
+    #     - getStarted/customization.md
+
+    - وب:
+      - 'وب/Search_Source.md'
+        
+
+    # - مهندسی معکوس:
+        
+    # - رمزنگاری:        
+
+    # - جرم‌شناسی:
+        
+    - PWN:
+      - pwn/VNE.md
+
+    - وبلاگ:
+        - blog/index.md
